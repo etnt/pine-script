@@ -19,3 +19,36 @@ However, they can also form at market turning points and
 act as reversal signals from key support or resistance levels."
 
 ![Inside Bars](images/inside-bars.png)
+
+
+## Position Sizes
+
+When trading, position sizing and risk calculation is the key to become
+ successful.
+
+We need to keep the losses small and adjust the position size according to what
+risk we are prepared to take for the planned Entry.
+
+Based on the Account Size and the max percentage we want to risk for any trade,
+we calculate, for a number of fixed max Loss percentages:
+
+The Position size, both in percent and in the selected currency.
+
+  * Number of shares to buy.
+  * Where to put the Stop Loss.
+  * Where a 1RTP (1 Risk amount Take Profit) level could be put .
+
+We also calculate the numbers based on the ATR times a multiple.
+
+The values are presented in a table format and will hopefully aid in selecting
+a suitable Stop Loss (based on the chart sutuation) and hence the proper
+Position Size.
+
+We also allow for expressing the Account size in currencies other than USD.
+
+Example:
+
+    Account Size in USD and trading US stocks: select USD
+    Account Size in SEK but trading US stocks: select USDSEK
+
+[Position Sizes](images/position-sizes.png)
