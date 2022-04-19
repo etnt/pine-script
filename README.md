@@ -1,7 +1,11 @@
 # pine-script
 
-A collection of Pine AScripts that I've written and are using
+A collection of Pine Scripts that I've written and are using
 in my Tradingview setup.
+
+To use them, open up the Tradingview Pine Editor, open a new
+indicator and replace the content with the new code; save and
+add the indicator to the chart.
 
 ## Inside Bars
 
