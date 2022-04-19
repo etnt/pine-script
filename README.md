@@ -23,8 +23,8 @@ act as reversal signals from key support or resistance levels."
 
 ## Position Sizes
 
-When trading, position sizing and risk calculation is the key to become
- successful.
+When trading, position sizing and risk calculation are the keys to become
+successful.
 
 We need to keep the losses small and adjust the position size according to what
 risk we are prepared to take for the planned Entry.
