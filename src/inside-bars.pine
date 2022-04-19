@@ -1,0 +1,45 @@
+// This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © kruskakli
+//
+// Indicate bars where their high and low are inside a previous bar.
+//
+//   "Inside bars show a period of consolidation in a market.
+//    They often form following a strong move in a market,
+//    as it ‘pauses’ to consolidate before making its next move.
+//
+//    However, they can also form at market turning points and
+//    act as reversal signals from key support or resistance levels."
+//
+//@version=5
+indicator("Inside Bars", overlay=true)
+
+
+float inside = 0.0
+if (high <= high[1]) and (low >= low[1])
+    inside := 1
+else if inside[1] == 1
+    int i = 2
+    while true
+        if inside[i] == 1
+            i := i + 1
+            continue
+        else if (high <= high[i]) and (low >= low[i])
+            inside := 1
+            break
+        else
+            inside := 0
+            break
+else
+    inside := 0
+
+vh = ta.valuewhen(inside[1] == 0 and inside == 1, high[1], 0)
+vl = ta.valuewhen(inside[1] == 0 and inside == 1, low[1],  0)
+
+color_line = input.color(defval=color.yellow, title="Inside Bars Color")
+transp = input.int(defval=90, title="Color transparency", minval=0, maxval=100)
+line_width = input.int(defval=1, title="Line width", minval=1, maxval=4)
+color_fill = color.new(color_line, transp)
+
+ph = plot(inside == 1 ? vh : na, title="Inside Bars High", style=plot.style_linebr, linewidth=line_width, color=color_line)
+pl = plot(inside == 1 ? vl : na, title="Inside Bars Low", style=plot.style_linebr, linewidth=line_width, color=color_line)
+fill(ph, pl, color=color_fill)
