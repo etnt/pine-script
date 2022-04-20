@@ -7,18 +7,30 @@ To use them, open up the Tradingview Pine Editor, open a new
 indicator and replace the content with the new code; save and
 add the indicator to the chart.
 
-## Inside Bars
+## Nice Volume
 
-Indicate bars where their high and low are inside a previous bar.
+This Volume panel is inspired by TradingLions ditto.
 
-Inside bars show a period of consolidation in a market.
-They often form following a strong move in a market,
-as it ‘pauses’ to consolidate before making its next move.
+Four different colors are used for the Volume columns:
 
-However, they can also form at market turning points and
-act as reversal signals from key support or resistance levels."
+  * Up/Down down columns.
+  * Pocket Pivot columns.
+  * Lowest of 10 periods.
 
-![Inside Bars](images/inside-bars.png)
+A moving average is plotted where the color is changed
+depending on the trend of the Acc/Dist volume indicator.
+
+A table is displayed containing some Volume indicators:
+
+  * Up/Down volume ratio, where a value above 1.5 is shown
+    in green, indicating that more than 50% och the volume
+    is positive; where a value below 0.5 is shown in red.
+  * On-Balance Volume trend; the percentage OBV is above/below
+    a moving average is displayed; positive/negative in green/red.
+  * The trend (Positive/Negative/Weak) of the Acc/Dist indicator
+    is displayed in either green/red.
+
+[Nice Volume](images/nice-volume.png)
 
 
 ## Position Sizes
@@ -52,3 +64,18 @@ Example:
     Account Size in SEK but trading US stocks: select USDSEK
 
 [Position Sizes](images/position-sizes.png)
+
+
+## Inside Bars
+
+Indicate bars where their high and low are inside a previous bar.
+
+Inside bars show a period of consolidation in a market.
+They often form following a strong move in a market,
+as it ‘pauses’ to consolidate before making its next move.
+
+However, they can also form at market turning points and
+act as reversal signals from key support or resistance levels."
+
+[Inside Bars](images/inside-bars.png)
+
