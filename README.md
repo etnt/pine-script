@@ -7,6 +7,25 @@ To use them, open up the Tradingview Pine Editor, open a new
 indicator and replace the content with the new code; save and
 add the indicator to the chart.
 
+## Key Moving Averages
+
+A number of Key Moving Averages are plotted;
+depending on the timeframe used, different values are used.
+
+The following (default) values are used:
+
+  * Daily: MA10, EMA21, MA50, MA200
+  * Weekly: MA10, MA40
+  * Intraday: Daily MA5  (idea curtesy: Brian Shannon) and EMA65
+
+The MA200 will be presented in white when On-Balance-Volume is positive,
+else it is presented in blue.
+
+It is also possibe to display a Bollinger Band.
+
+[Key Moving Averages](images/key-moving-averages.png)
+
+
 ## Nice Volume
 
 This Volume panel is inspired by TradingLions ditto.
